@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angkringan Warisan Rasa - Tradisi & Kualitas</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap"
+        rel="stylesheet">
+
+    <!-- Remix Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header / Navbar -->
+    <header class="site-header">
+        <div class="logo">Warisan.</div>
+        <div class="header-actions">
+            <!-- Hidden on mobile, visible on desktop could be added here -->
+            <nav class="desktop-nav">
+                <a href="#makanan">Menu</a>
+                <a href="#live-music">Live Music</a>
+                <a href="#lokasi">Lokasi</a>
+            </nav>
+            <a href="cart.html" class="cart-icon">
+                <i class="ri-shopping-bag-3-line"></i>
+                <span class="cart-count">0</span>
+            </a>
+            <button id="openReservation" class="btn-outline">Reservasi <i class="ri-calendar-check-line"></i></button>
+            <div class="menu-toggle">
+                <i class="ri-menu-4-line"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu" id="mobileMenu">
+        <button class="mobile-menu-close" id="closeMobileMenu">
+            <i class="ri-close-line"></i>
+        </button>
+        <nav>
+            <a href="#makanan">Menu</a>
+            <a href="#live-music">Live Music</a>
+            <a href="#lokasi">Lokasi</a>
+            <a href="cart.html">Keranjang</a>
+        </nav>
+        <div class="social-links">
+            <a href="#"><i class="ri-instagram-line"></i></a>
+            <a href="#"><i class="ri-tiktok-fill"></i></a>
+            <a href="#"><i class="ri-youtube-fill"></i></a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-bg-parallax"></div>
+        <div class="hero-container">
+            <div class="hero-content" data-aos="fade-up" data-aos-duration="1000">
+                <span class="hero-subtitle">Authentic Indonesian Night Life</span>
+                <h1>Warisan Rasa <br> & Cerita Malam.</h1>
+                <p>Menghadirkan kehangatan tradisi angkringan dalam balutan kenyamanan modern. Tempat di mana kopi joss
+                    bertemu dengan alunan akustik syahdu.</p>
+
+                <div class="hero-cta">
+                    <a href="#makanan" class="btn-primary">Lihat Menu</a>
+                    <a href="#live-music" class="btn-text">Jadwal Akustik <i class="ri-arrow-right-line"></i></a>
+                </div>
+            </div>
+
+            <div class="hero-scroll-indicator">
+                <div class="mouse"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats / Trust Section (New Feature) -->
+    <section class="stats-section">
+        <div class="container stats-grid">
+            <div class="stat-item" data-aos="fade-up" data-aos-delay="0">
+                <h3>5K+</h3>
+                <p>Pelanggan Senang</p>
+            </div>
+            <div class="stat-item" data-aos="fade-up" data-aos-delay="100">
+                <h3>50+</h3>
+                <p>Menu Varian</p>
+            </div>
+            <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
+                <h3>Every Night</h3>
+                <p>Live Acoustic</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Philosophy/Intro Section -->
+    <section class="philosophy-section">
+        <div class="container">
+            <div class="philosophy-content" data-aos="fade-up">
+                <span class="section-tag">Filosofi Kami</span>
+                <h2 class="section-title">Lebih Dari Sekadar Angkringan,<br>Ini Adalah Ruang Temu.</h2>
+                <div class="divider-center"></div>
+                <p class="section-desc">Kami percaya bahwa malam yang sempurna dimulai dari obrolan hangat, ditemani
+                    nasi kucing hangat dan teh nasgitel (panas, legi, kental).</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Makanan Section (3 Grid) -->
+    <section class="menu-section" id="makanan">
+        <div class="container">
+            <div class="section-header-center" data-aos="fade-up">
+                <h2>Hidangan Utama</h2>
+                <p>Cita rasa otentik yang siap memanjakan lidah.</p>
+            </div>
+
+            <div class="menu-grid">
+                <!-- Item 1 -->
+                <div class="menu-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?q=80&w=600&auto=format&fit=crop"
+                            alt="Nasi Kucing">
+                        <div class="overlay-actions">
+                            <button class="btn-icon"><i class="ri-eye-line"></i></button>
+                        </div>
+                    </div>
+                    <div class="card-desc">
+                        <div class="card-header">
+                            <h3>Nasi Kucing Sultan</h3>
+                            <span class="price">Rp 5.000</span>
+                        </div>
+                        <p class="desc-text">Nasi pulen porsi pas dengan aneka lauk pilihan: Sambal Teri, Orek Tempe,
+                            atau Bandeng Presto.</p>
+                        <button class="btn-add-cart">Tambah <i class="ri-add-line"></i></button>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="menu-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card-img-wrapper">
+                        <img src="images/sate.jpg" alt="Sate Kulit">
+                        <span class="badge">Favorit</span>
+                    </div>
+                    <div class="card-desc">
+                        <div class="card-header">
+                            <h3>Sate Kulit Bakar</h3>
+                            <span class="price">Rp 3.500</span>
+                        </div>
+                        <p class="desc-text">Kulit ayam pilihan yang dimarinasi bumbu bacem manis gurih, dibakar dengan
+                            arang batok kelapa asli.</p>
+                        <button class="btn-add-cart">Tambah <i class="ri-add-line"></i></button>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="menu-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card-img-wrapper">
+                        <img src="images/telur.jpg" alt="Sate Telur Puyuh">
+                    </div>
+                    <div class="card-desc">
+                        <div class="card-header">
+                            <h3>Sate Telur Puyuh</h3>
+                            <span class="price">Rp 4.000</span>
+                        </div>
+                        <p class="desc-text">Telur puyuh bacem dengan bumbu meresap sempurna hingga ke dalam kuning
+                            telur. Gurih dan manis.</p>
+                        <button class="btn-add-cart">Tambah <i class="ri-add-line"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Live Acoustic Schedule Section (New Feature) -->
+    <section class="live-music-section" id="live-music">
+        <div class="container with-sidebar">
+            <div class="music-content" data-aos="fade-right">
+                <span class="section-tag-dark">Entertainment</span>
+                <h2>Live Acoustic <br> Every Weekend.</h2>
+                <p>Nikmati suasana malam syahdu ditemani lantunan lagu-lagu hits dan nostalgia dari band lokal pilihan.
+                </p>
+
+                <div class="schedule-list">
+                    <div class="schedule-item">
+                        <div class="day">Jumat</div>
+                        <div class="details">
+                            <h4>Nostalgia 90an</h4>
+                            <p>20:00 - 23:00 WIB</p>
+                        </div>
+                    </div>
+                    <div class="schedule-item active">
+                        <div class="day">Sabtu</div>
+                        <div class="details">
+                            <h4>Top 40 & Request</h4>
+                            <p>19:00 - 24:00 WIB</p>
+                        </div>
+                    </div>
+                    <div class="schedule-item">
+                        <div class="day">Minggu</div>
+                        <div class="details">
+                            <h4>Easy Listening</h4>
+                            <p>19:00 - 22:00 WIB</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="music-image" data-aos="zoom-in">
+                <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=1000&auto=format&fit=crop"
+                    alt="Live Music Atmosphere">
+                <div class="play-btn-circle">
+                    <i class="ri-music-2-fill"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Minuman Section -->
+    <section class="menu-section alt-bg" id="minuman">
+        <div class="container">
+            <div class="section-header-center" data-aos="fade-up">
+                <h2>Penghangat Suasana</h2>
+                <p>Minuman tradisional yang diracik dengan hati.</p>
+            </div>
+
+            <div class="menu-grid">
+                <!-- Item 1 -->
+                <div class="menu-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card-img-wrapper">
+                        <img src="images/ronde.jpg" alt="Wedang Ronde">
+                    </div>
+                    <div class="card-desc">
+                        <div class="card-header">
+                            <h3>Wedang Ronde</h3>
+                            <span class="price">Rp 8.000</span>
+                        </div>
+                        <p class="desc-text">Bola-bola ketan isi kacang dalam kuah jahe hangat, dilengkapi kolang-kaling
+                            dan potongan roti tawar.</p>
+                        <button class="btn-add-cart">Tambah <i class="ri-add-line"></i></button>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="menu-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1510626176961-4b57d4fbad03?q=80&w=600&auto=format&fit=crop"
+                            alt="Kopi Joss">
+                        <span class="badge">Legendary</span>
+                    </div>
+                    <div class="card-desc">
+                        <div class="card-header">
+                            <h3>Kopi Joss Arang</h3>
+                            <span class="price">Rp 6.000</span>
+                        </div>
+                        <p class="desc-text">Kopi hitam kental khas angkringan yang dicelup arang panas membara. Rendah
+                            asam, kaya aroma.</p>
+                        <button class="btn-add-cart">Tambah <i class="ri-add-line"></i></button>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="menu-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card-img-wrapper">
+                        <img src="images/teh.jpg" alt="Es Teh Kampul">
+                    </div>
+                    <div class="card-desc">
+                        <div class="card-header">
+                            <h3>Es Teh Kampul</h3>
+                            <span class="price">Rp 4.000</span>
+                        </div>
+                        <p class="desc-text">Teh manis segar dengan irisan jeruk nipis asli. Perpaduan manis dan asam
+                            yang menyegarkan di siang hari.</p>
+                        <button class="btn-add-cart">Tambah <i class="ri-add-line"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial Section (New Feature) -->
+    <section class="testimonial-section">
+        <div class="container">
+            <h2 class="text-center" data-aos="fade-down">Kata Warga</h2>
+            <div class="testimonial-slider" data-aos="fade-up">
+                <div class="testi-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"Tempat nongkrong paling oke di kota ini. Nasi kucingnya juara, suasananya dapet banget buat
+                        ngerjain tugas atau sekedar ngobrol."</p>
+                    <div class="user-profile">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="User">
+                        <span>Budi Santoso</span>
+                    </div>
+                </div>
+                <div class="testi-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"Kopi Joss-nya beneran nendang! Live music tiap malem minggu bikin betah berjam-jam."</p>
+                    <div class="user-profile">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="User">
+                        <span>Siti Rahma</span>
+                    </div>
+                </div>
+                <div class="testi-card">
+                    <div class="stars">★★★★☆</div>
+                    <p>"Harga mahasiswa tapi kualitas bintang lima. Sate kulitnya wajib coba sih."</p>
+                    <div class="user-profile">
+                        <img src="https://randomuser.me/api/portraits/men/86.jpg" alt="User">
+                        <span>Kevin Wijaya</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Location -->
+    <section class="footer-cta" id="lokasi">
+        <div class="footer-overlay"></div>
+        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1000&auto=format&fit=crop"
+            alt="BackgroundFooter" class="footer-bg-img">
+        <div class="container cta-content">
+            <h2 data-aos="zoom-in">Mari Mampir <br> Malam Ini.</h2>
+            <p data-aos="fade-up" data-aos-delay="100">Jl. Malioboro No. 123, Yogyakarta <br> Buka Setiap Hari: 17.00 -
+                02.00 WIB</p>
+            <div class="footer-actions" data-aos="fade-up" data-aos-delay="200">
+                <a href="https://maps.google.com" target="_blank" class="btn-white"><i class="ri-map-pin-line"></i>
+                    Petunjuk Arah</a>
+                <a href="https://wa.me" target="_blank" class="btn-outline-white"><i class="ri-whatsapp-line"></i>
+                    WhatsApp Kami</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <h3>Warisan.</h3>
+                <p>Angkringan Modern & Kopi Joss.</p>
+            </div>
+            <div class="footer-socials">
+                <a href="#"><i class="ri-instagram-line"></i></a>
+                <a href="#"><i class="ri-tiktok-fill"></i></a>
+                <a href="#"><i class="ri-youtube-fill"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Angkringan Warisan Rasa. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Reservation Modal -->
+    <div id="reservationModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Reservasi Meja</h2>
+            <p>Amankan tempat nongkrongmu malam ini.</p>
+            <form id="reservationForm">
+                <div class="form-group">
+                    <label>Nama Lengkap</label>
+                    <input type="text" placeholder="Masukkan nama anda" required>
+                </div>
+                <div class="form-group">
+                    <label>Jumlah Orang</label>
+                    <select>
+                        <option>2 Orang</option>
+                        <option>4 Orang</option>
+                        <option>6+ Orang (Rombongan)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Waktu Kedatangan</label>
+                    <input type="time" required>
+                </div>
+                <button type="submit" class="btn-primary" style="width: 100%;">Kirim Reservasi</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- AOS Script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

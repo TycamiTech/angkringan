@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keranjang Belanja - Angkringan Warisan Rasa</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap"
+        rel="stylesheet">
+
+    <!-- Remix Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header / Navbar -->
+    <header class="site-header scrolled">
+        <div class="logo"><a href="index.html">Warisan.</a></div>
+        <div class="header-actions">
+            <nav class="desktop-nav">
+                <a href="index.html#makanan">Menu</a>
+                <a href="index.html#live-music">Live Music</a>
+                <a href="index.html#lokasi">Lokasi</a>
+            </nav>
+            <div class="cart-icon">
+                <i class="ri-shopping-bag-3-fill"></i>
+                <span class="cart-count">2</span>
+            </div>
+            <button id="openReservation" class="btn-outline">Reservasi <i class="ri-calendar-check-line"></i></button>
+            <div class="menu-toggle">
+                <i class="ri-menu-4-line"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu" id="mobileMenu">
+        <button class="mobile-menu-close" id="closeMobileMenu">
+            <i class="ri-close-line"></i>
+        </button>
+        <nav>
+            <a href="index.html#makanan">Menu</a>
+            <a href="index.html#live-music">Live Music</a>
+            <a href="index.html#lokasi">Lokasi</a>
+            <a href="cart.html">Keranjang</a>
+        </nav>
+        <div class="social-links">
+            <a href="#"><i class="ri-instagram-line"></i></a>
+            <a href="#"><i class="ri-tiktok-fill"></i></a>
+            <a href="#"><i class="ri-youtube-fill"></i></a>
+        </div>
+    </div>
+
+    <!-- Cart Page Content -->
+    <section class="cart-page">
+        <div class="container">
+            <h1 class="section-title text-center" data-aos="fade-up">Keranjang Belanja</h1>
+            <div class="divider-center" data-aos="fade-up" data-aos-delay="100"></div>
+
+            <div class="cart-content" data-aos="fade-up" data-aos-delay="200">
+                <!-- Cart Table -->
+                <div class="cart-table-container">
+                    <table class="cart-table">
+                        <thead>
+                            <tr>
+                                <th>Produk</th>
+                                <th>Harga</th>
+                                <th>Jumlah</th>
+                                <th>Total</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="cart-item-info">
+                                        <img src="https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?q=80&w=200&auto=format&fit=crop"
+                                            class="cart-item-img" alt="Nasi Kucing">
+                                        <div>
+                                            <h4>Nasi Kucing Sultan</h4>
+                                            <small class="text-muted">Varian: Sambal Teri</small>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="price">Rp 5.000</td>
+                                <td>
+                                    <div class="quantity-control">
+                                        <button class="qty-btn minus">-</button>
+                                        <input type="text" class="qty-input" value="2" readonly>
+                                        <button class="qty-btn plus">+</button>
+                                    </div>
+                                </td>
+                                <td class="price">Rp 10.000</td>
+                                <td>
+                                    <button class="btn-remove"><i class="ri-delete-bin-line"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="cart-item-info">
+                                        <img src="https://images.unsplash.com/photo-1603083656157-12340277317d?q=80&w=200&auto=format&fit=crop"
+                                            class="cart-item-img" alt="Sate Kulit">
+                                        <div>
+                                            <h4>Sate Kulit Bakar</h4>
+                                            <small class="text-muted">Level: Pedas Manis</small>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="price">Rp 3.500</td>
+                                <td>
+                                    <div class="quantity-control">
+                                        <button class="qty-btn minus">-</button>
+                                        <input type="text" class="qty-input" value="5" readonly>
+                                        <button class="qty-btn plus">+</button>
+                                    </div>
+                                </td>
+                                <td class="price">Rp 17.500</td>
+                                <td>
+                                    <button class="btn-remove"><i class="ri-delete-bin-line"></i></button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Cart Summary -->
+                <div class="cart-summary">
+                    <h3>Ringkasan Pesanan</h3>
+                    <div style="margin-top: 20px;">
+                        <div class="summary-row">
+                            <span>Subtotal</span>
+                            <span>Rp 27.500</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Pajak & Layanan (10%)</span>
+                            <span>Rp 2.750</span>
+                        </div>
+                        <div class="summary-row total">
+                            <span>Total Bayar</span>
+                            <span>Rp 30.250</span>
+                        </div>
+                        <button class="btn-primary" style="width: 100%; margin-top: 20px;">
+                            Checkout via WhatsApp <i class="ri-whatsapp-line"></i>
+                        </button>
+                        <a href="index.html#makanan" class="btn-text"
+                            style="display: block; text-align: center; margin-top: 15px;">
+                            <i class="ri-arrow-left-line"></i> Tambah Menu Lain
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <h3>Warisan.</h3>
+                <p>Angkringan Modern & Kopi Joss.</p>
+            </div>
+            <div class="footer-socials">
+                <a href="#"><i class="ri-instagram-line"></i></a>
+                <a href="#"><i class="ri-tiktok-fill"></i></a>
+                <a href="#"><i class="ri-youtube-fill"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Angkringan Warisan Rasa. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Reservation Modal -->
+    <div id="reservationModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Reservasi Meja</h2>
+            <p>Amankan tempat nongkrongmu malam ini.</p>
+            <form id="reservationForm">
+                <div class="form-group">
+                    <label>Nama Lengkap</label>
+                    <input type="text" placeholder="Masukkan nama anda" required>
+                </div>
+                <div class="form-group">
+                    <label>Jumlah Orang</label>
+                    <select>
+                        <option>2 Orang</option>
+                        <option>4 Orang</option>
+                        <option>6+ Orang (Rombongan)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Waktu Kedatangan</label>
+                    <input type="time" required>
+                </div>
+                <button type="submit" class="btn-primary" style="width: 100%;">Kirim Reservasi</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
